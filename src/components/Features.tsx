@@ -11,17 +11,17 @@ const Features = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
-    <section className="py-4 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto text-center">
         {/* No extra horizontal gap */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-4 items-center">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white transform hover:scale-110 ease-out duration-500 p-2 h-40 shadow-md border rounded-lg 
+              className="bg-white/80 transform hover:scale-105 ease-out duration-500 p-2 h-[100px] shadow-md border rounded-lg 
                         flex justify-center items-center"
             >
-              <button className="text-lg font-semibold text-center px-4">
+              <button className="text-lg h-full font-semibold text-center px-4">
                 {feature.description}
               </button>
             </div>

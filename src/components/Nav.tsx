@@ -30,7 +30,7 @@ const Nav = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
                 e.preventDefault();  // Prevent default navigation
                 setIsLoginOpen(true); 
               }}>
-              <button className="h-full text-white transform hover:bg-blue-600 duration-300 px-5">Login</button>
+              <button className="h-full text-white transform hover:bg-blue-600 duration-300 px-5">Sign On (Duty)</button>
             </Link>
           </ul>
         </div>
