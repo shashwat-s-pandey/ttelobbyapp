@@ -1,6 +1,6 @@
 "use client"
-import Carousel from "@/components/Carousel";
-import Features from "@/components/Features";
+// import Carousel from "@/components/Carousel";
+// import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
