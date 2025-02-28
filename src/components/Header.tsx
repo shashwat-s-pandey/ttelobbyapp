@@ -26,7 +26,7 @@ const Header = () => {
     <div>
       <div className="flex justify-between items-center text-center">
         {/* Left Logo */}
-        <Image className="pl-2" src={"/irlogo.png"} alt="" width={90} height={90}></Image>
+        <Image className="pl-8" src={"/irlogo.png"} alt="" width={110} height={110}></Image>
         {/* <img className="pl-2" src="./irlogo.png" alt="IR Logo" width={90} height={90} /> */}
 
         {/* Typing Effect Heading */}
@@ -40,7 +40,7 @@ const Header = () => {
         </motion.h1>
 
         {/* Right Logo */}
-        <a className="pl-5" href="https://www.cris.org.in">
+        <a className="pr-8" href="https://www.cris.org.in">
           <Image src={"/cris_logo.png"} alt="" width={150} height={100}></Image>
           {/* <img src="./cris_logo.png" alt="CRIS Logo" width={150} height={100} /> */}
         </a>
