@@ -48,7 +48,7 @@ const Dashboard = () => {
             <FaBars />
           </button>
           <a href="https://www.cris.org.in" className="ml-4">
-            <Image src="./cris_logo.png" alt="Logo" width={120} height={50} />
+            <Image src="/cris_logo.png" alt="Logo" width={120} height={50} />
           </a>
           <ul className="flex space-x-6 text-xl ml-auto items-center">
             {uid && <li className="text-gray-700 font-semibold">Welcome, admin</li>}
