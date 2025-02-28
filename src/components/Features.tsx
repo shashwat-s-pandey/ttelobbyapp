@@ -1,26 +1,32 @@
-import React from 'react'
+import React from "react";
 
 const Features = () => {
-    const features = [
-        { title: "Fast", description: "Optimized for speed and performance." },
-        { title: "Responsive", description: "Works seamlessly across all devices." },
-        { title: "SEO-Friendly", description: "Designed with best SEO practices." }
-      ];
+  const features = [
+    { title: "1", description: "Drawing out of TTE links." },
+    { title: "2", description: "Accountal of duty hours." },
+    { title: "3", description: "Preparation of TA/night duty allowance bills." },
+  ];
+
   return (
-    <section className="py-16 bg-white">
+    <section className="py-4 bg-white">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold">Why Choose Us?</h2>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* No extra horizontal gap */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-4 items-center">
           {features.map((feature, index) => (
-            <div key={index} className="p-6 shadow-md border rounded-lg">
-              <h3 className="text-xl font-semibold">{feature.title}</h3>
-              <p className="text-gray-600 mt-2">{feature.description}</p>
+            <div 
+              key={index} 
+              className="bg-white transform hover:scale-110 ease-out duration-500 p-2 h-40 shadow-md border rounded-lg 
+                        flex justify-center items-center"
+            >
+              <button className="text-lg font-semibold text-center px-4">
+                {feature.description}
+              </button>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
