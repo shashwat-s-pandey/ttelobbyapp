@@ -1,45 +1,88 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { Home, Info, LogIn } from "lucide-react";
+import { Home, Info, LogIn, LayoutDashboard, Train, ClipboardList, Bell, Settings } from "lucide-react";
+import { LoginModal } from "./LoginModal";
 
 const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) => {
+
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    
   return (
+    <div>
+    <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     <aside
-      className={`h-[81%] bg-white/50 backdrop-blur-lg shadow-xl border-gray-200 absolute left-0 flex flex-col transition-all duration-300 ${
-        isOpen ? "w-44 px-4" : "w-[77px] px-2"
+      className={`h-[75%] bg-white/40 backdrop-blur-lg shadow-xl border-gray-200 absolute left-0 flex flex-col transition-all duration-300 ${
+        isOpen ? "w-[187px] px-4" : "w-[77px] px-2"
       }`}
     >
       <ul className="mt-6 space-y-4">
+
+        {/* Dashboard */}
         <li>
-          <Link href="/" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
-            <Home className="w-[28px] h-[28px] shrink-0" />  
+          <Link href="/dashboard" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all" onClick={(e) => { 
+                e.preventDefault();  // Prevent default navigation
+                setIsLoginOpen(true); 
+              }}>
+            <LayoutDashboard className="w-[28px] h-[28px] shrink-0" />
             <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
-              Home
+              Dashboard
             </span>
           </Link>
         </li>
+
+        {/* Train Schedules */}
         <li>
-          <a href="#" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
+          <Link href="/schedules" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
+            <Train className="w-[28px] h-[28px] shrink-0" />
+            <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
+              Schedules
+            </span>
+          </Link>
+        </li>
+
+        {/* Duty Logs */}
+        <li>
+          <Link href="/duty-logs" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
+            <ClipboardList className="w-[28px] h-[28px] shrink-0" />
+            <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
+              Duty Logs
+            </span>
+          </Link>
+        </li>
+
+        {/* Notifications */}
+        <li>
+          <Link href="/notifications" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
+            <Bell className="w-[28px] h-[28px] shrink-0" />
+            <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
+              Notifications
+            </span>
+          </Link>
+        </li>
+
+        {/* About */}
+        <li>
+          <Link href="/about" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
             <Info className="w-[28px] h-[28px] shrink-0" />
             <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
               About
             </span>
-          </a>
+          </Link>
         </li>
+
+        {/* Settings */}
         <li>
-          <button
-            onClick={onLogin}
-            className="w-full flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all"
-          >
-            <LogIn className="w-[28px] h-[28px] shrink-0" />
+          <Link href="/settings" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
+            <Settings className="w-[28px] h-[28px] shrink-0" />
             <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
-              Login
+              Settings
             </span>
-          </button>
+          </Link>
         </li>
       </ul>
     </aside>
+    </div>
   );
 };
 

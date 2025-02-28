@@ -16,7 +16,6 @@ export default function Home() {
     <div>
       <Header/>
       <Nav onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-
       <motion.div
         initial={{ opacity: 0.1 }}
         animate={{ opacity: 0.5 }}
@@ -33,6 +32,7 @@ export default function Home() {
           blurDataURL="/cbvndb.jpeg" // ✅ Uses the same image for instant appearance
         />
       </motion.div>
+
 
 
       <Sidebar onLogin={() => console.log("Login clicked")} isOpen={isSidebarOpen} />

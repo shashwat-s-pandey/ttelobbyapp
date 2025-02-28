@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { LoginModal } from "./LoginModal";
 
 const Features = () => {
   const features = [
@@ -6,6 +7,8 @@ const Features = () => {
     { title: "2", description: "Accountal of duty hours." },
     { title: "3", description: "Preparation of TA/night duty allowance bills." },
   ];
+
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
     <section className="py-4 bg-white">
@@ -24,7 +27,14 @@ const Features = () => {
             </div>
           ))}
         </div>
+        <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-transform duration-300 transform hover:scale-105 shadow-lg" onClick={(e) => { 
+                e.preventDefault();  // Prevent default navigation
+                setIsLoginOpen(true); 
+              }}>
+              Login
+        </button>
       </div>
+      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </section>
   );
 };

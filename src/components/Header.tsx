@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Header = () => {
-  const text = "Welcome to Traveling Ticket Examiner Lobby";
+  const text = "Traveling Ticket Examiner Lobby";
   const [displayedText, setDisplayedText] = useState(""); // Initialize as empty string
 
   useEffect(() => {
