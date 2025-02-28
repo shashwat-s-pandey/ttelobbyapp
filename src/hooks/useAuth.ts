@@ -10,7 +10,7 @@ const useAuth = () => {
     if (!token) {
       router.push("/"); // Redirect to login page if not authenticated
     }
-  }, []);
+  }, [router]); // Include 'router' in the dependency array
 
   return null;
 };

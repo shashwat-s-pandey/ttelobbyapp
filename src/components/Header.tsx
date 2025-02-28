@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Header = () => {
   const text = "Welcome to Traveling Ticket Examiner Lobby";
@@ -25,7 +26,8 @@ const Header = () => {
     <div>
       <div className="flex justify-between items-center text-center">
         {/* Left Logo */}
-        <img className="pl-2" src="./irlogo.png" alt="IR Logo" width={90} height={90} />
+        <Image className="pl-2" src={"/irlogo.png"} alt="" width={90} height={90}></Image>
+        {/* <img className="pl-2" src="./irlogo.png" alt="IR Logo" width={90} height={90} /> */}
 
         {/* Typing Effect Heading */}
         <motion.h1
@@ -39,7 +41,8 @@ const Header = () => {
 
         {/* Right Logo */}
         <a className="pl-5" href="https://www.cris.org.in">
-          <img src="./cris_logo.png" alt="CRIS Logo" width={150} height={100} />
+          <Image src={"/cris_logo.png"} alt="" width={150} height={100}></Image>
+          {/* <img src="./cris_logo.png" alt="CRIS Logo" width={150} height={100} /> */}
         </a>
       </div>
 

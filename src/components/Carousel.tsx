@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { LoginModal } from "./LoginModal";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Home, Info, LogIn } from "lucide-react"; // Import icons
 

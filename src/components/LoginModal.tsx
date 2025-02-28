@@ -67,7 +67,11 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         setError(data.message || "Invalid credentials");
       }
     } catch (err) {
-      setError("Something went wrong. Try again.");
+      if (err instanceof Error) {
+        setError(`Error: ${err.message}`);
+      } else {
+        setError("Something went wrong. Try again.");
+      }
     }
 
     setLoading(false);
