@@ -9,7 +9,7 @@ const Nav = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
 
   return (
     <>
-      <nav className="bg-blue-500 h-12 z-50 flex items-center px-4">
+      <nav className="bg-blue-500 h-12 z-50 flex items-center px-4 shadow-md">
         {/* Sidebar Toggle Button */}
         <button
           className="text-white hover:scale-110 p-2 mr-4"
@@ -19,7 +19,7 @@ const Nav = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
         </button>
 
         <div className="h-full flex items-center">
-          <ul className="flex text-xl h-full items-center justify-center">
+          <ul className="flex text-lg h-full items-center justify-center">
             <Link href="/" className="bg-blue-600 h-full flex items-center justify-center">
               <button className="h-full text-white px-5">Home</button>
             </Link>

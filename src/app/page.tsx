@@ -13,14 +13,14 @@ import { motion } from "framer-motion";
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   return (
-    <div>
+    <div className="">
       <Header/>
       <Nav onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <motion.div
         initial={{ opacity: 0.1 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="absolute w-full h-[80%]"
+        className="absolute w-full h-[100%]"
       >
         <Image 
           src="/cbvndb.jpeg" 
@@ -28,18 +28,19 @@ export default function Home() {
           layout="fill"
           objectFit="cover"
           priority
-          placeholder="blur" // ✅ Adds a low-res placeholder
-          blurDataURL="/cbvndb.jpeg" // ✅ Uses the same image for instant appearance
+          placeholder="blur" 
+          blurDataURL="/cbvndb.jpeg" 
         />
       </motion.div>
 
 
 
-      <Sidebar onLogin={() => console.log("Login clicked")} isOpen={isSidebarOpen} />
-      <main className="ml-44">
-        <HeroSection/>
-        {/* <Carousel /> */}
-      </main>
+      <div className="">
+        <Sidebar onLogin={() => console.log("Login clicked")} isOpen={isSidebarOpen} />
+        <main className="ml-44">
+          <HeroSection />
+        </main>
+      </div>
       <Footer/>
     </div>
   );

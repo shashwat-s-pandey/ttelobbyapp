@@ -13,7 +13,7 @@ const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
       <aside
-        className={`h-[75%] bg-white/40 backdrop-blur-lg shadow-xl border-gray-200 absolute left-0 flex flex-col transition-all duration-300 ${
+        className={`h-screen bg-white/40 backdrop-blur-lg shadow-xl border-gray-200 absolute left-0 flex flex-col transition-all duration-300 ${
           isOpen ? "w-[187px] px-4" : "w-[77px] px-2"
         }`}
       >
