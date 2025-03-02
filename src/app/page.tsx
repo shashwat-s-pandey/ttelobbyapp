@@ -13,14 +13,15 @@ import { motion } from "framer-motion";
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
       <Header/>
       <Nav onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
+      <Sidebar onLogin={() => console.log("Login clicked")} isOpen={isSidebarOpen} />
       <motion.div
         initial={{ opacity: 0.1 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="absolute w-full h-[100%]"
+        className="absolute w-full h-[calc(100vh-130px)] top-[130px]"
       >
         <Image 
           src="/cbvndb.jpeg" 
@@ -32,15 +33,9 @@ export default function Home() {
           blurDataURL="/cbvndb.jpeg" 
         />
       </motion.div>
-
-
-
-      <div className="">
-        <Sidebar onLogin={() => console.log("Login clicked")} isOpen={isSidebarOpen} />
-        <main className="ml-44">
-          <HeroSection />
-        </main>
-      </div>
+      <main className="ml-44 flex-grow pt-4">
+        <HeroSection />
+      </main>
       <Footer/>
     </div>
   );
