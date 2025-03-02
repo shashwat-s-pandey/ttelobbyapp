@@ -24,14 +24,14 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center text-center">
+      <div className="h-[90px] sm:h-[80px] flex justify-between items-center text-center">
         {/* Left Logo */}
         <Image className="pl-8" src={"/irlogo.png"} alt="" width={110} height={110}></Image>
         {/* <img className="pl-2" src="./irlogo.png" alt="IR Logo" width={90} height={90} /> */}
 
         {/* Typing Effect Heading */}
         <motion.h1
-          className="text-4xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
+          className="lg:text-4xl text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}

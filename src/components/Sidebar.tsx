@@ -13,10 +13,10 @@ const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
       <aside
-  className={`absolute left-0 top-[130px] w-[187px] transition-all duration-300 shadow-xl border-gray-200 bg-white/80 backdrop-blur-lg flex flex-col h-[calc(100vh-130px)] bottom-0 z-40 ${
+  className={`absolute left-0 top-[125px] w-[187px] transition-all duration-300 shadow-xl border-gray-200 bg-white/80 backdrop-blur-lg flex flex-col min-h-[calc(100vh+50px)] md:min-h-[calc(100vh-130px)] lg:min-h-[calc(100vh-130px)] bottom-0 z-40 ${
     isOpen ? "px-4" : "px-2 w-[77px]"
   }`}
-  style={{ height: "calc(100vh - 130px)" }} // Ensures it doesn't overlap navbar
+  style={{ height: "calc(100vh - 125px)" }} // Ensures it doesn't overlap navbar
 >
 
         <ul className="mt-6 space-y-4">

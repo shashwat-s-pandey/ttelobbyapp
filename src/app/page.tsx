@@ -21,7 +21,7 @@ export default function Home() {
         initial={{ opacity: 0.1 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="absolute w-full h-[calc(100vh-130px)] top-[130px]"
+        className="absolute w-full h-[calc(100vh+50px)] md:h-[calc(100vh-125px)] lg:h-[calc(100vh-125px)] top-[125px]"
       >
         <Image 
           src="/cbvndb.jpeg" 
