@@ -23,14 +23,17 @@ const Nav = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
             <Link href="/" className="bg-blue-600 h-full flex items-center justify-center">
               <button className="h-full text-white px-5">Home</button>
             </Link>
-            <Link href="/" className="h-full">
-              <button className="h-full text-white transform hover:bg-blue-600 duration-300 px-5">About</button>
-            </Link>
             <Link className="h-full" href="/login" onClick={(e) => { 
                 e.preventDefault();  // Prevent default navigation
                 setIsLoginOpen(true); 
               }}>
               <button className="h-full text-white transform hover:bg-blue-600 duration-300 px-5">Sign On (Duty)</button>
+            </Link>
+            <Link className="h-full" href="/login" onClick={(e) => { 
+                e.preventDefault();  // Prevent default navigation
+                setIsLoginOpen(true); 
+              }}>
+              <button className="h-full text-white transform hover:bg-blue-600 duration-300 px-5">Sign Off (Duty)</button>
             </Link>
           </ul>
         </div>
