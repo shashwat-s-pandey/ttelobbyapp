@@ -20,9 +20,9 @@ const Features = () => {
               key={index} 
               className="bg-white/80 transform hover:scale-105 ease-out duration-500 p-2 
                         shadow-md border rounded-lg flex justify-center items-center 
-                        h-[80px] md:h-[100px] w-[200px] md:w-auto text-sm md:text-lg"
+                        h-[90px] md:h-[100px] w-[120px] md:w-auto text-sm md:text-lg"
             >
-              <button className="text-center md:text-[14px] font-semibold px-4">
+              <button className="text-center text-[10px] md:text-[14px] font-semibold px-4">
                 {feature.description}
               </button>
             </div>

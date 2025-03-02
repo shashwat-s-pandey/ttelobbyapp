@@ -19,7 +19,7 @@ const Nav = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
         </button>
 
         <div className="h-full flex items-center">
-          <ul className="flex text-lg h-full items-center justify-center">
+          <ul className="flex text-sm lg:text-lg md:text-lg h-full items-center justify-center">
             <Link href="/" className="bg-blue-600 h-full flex items-center justify-center">
               <button className="h-full text-white px-5">Home</button>
             </Link>

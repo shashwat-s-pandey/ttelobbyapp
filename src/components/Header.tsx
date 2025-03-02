@@ -31,7 +31,7 @@ const Header = () => {
 
         {/* Typing Effect Heading */}
         <motion.h1
-          className="lg:text-4xl text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
+          className="lg:text-4xl text-lg font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
