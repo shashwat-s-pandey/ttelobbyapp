@@ -1,0 +1,60 @@
+@media screen and (max-width: 767px) {
+    .railway {
+      min-height: 44em;
+    }
+  }
+
+@media screen and (max-width: 639px) {
+    .railway {
+      min-height: 44em;
+    }
+  }
+
+@media screen and (max-width: 611px) {
+    .railway {
+      min-height: 44em;
+    }
+  }
+
+@media screen and (max-width: 561px) {
+    .railway {
+      min-height: 48em;
+    }
+  }
+
+@media screen and (max-width: 492px) {
+    .railway {
+      min-height: 48em;
+    }
+  }
+
+
+@media screen and (max-width: 431px) {
+    .railway {
+      min-height: 52em;
+    }
+  }
+
+@media screen and (max-width: 425px) {
+    .railway {
+      min-height: 52em;
+    }
+  }
+
+  @media screen and (max-width: 397px) {
+    .railway {
+      min-height: 58em;
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .railway {
+      min-height: 58em;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .railway {
+      min-height: 60em;
+    }
+  }

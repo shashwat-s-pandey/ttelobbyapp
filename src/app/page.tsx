@@ -9,6 +9,7 @@ import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import "./home.css"
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -21,7 +22,7 @@ export default function Home() {
         initial={{ opacity: 0.1 }}
         animate={{ opacity: 0.5 }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="absolute w-full h-[calc(100vh-140px)] md:h-[calc(100vh-125px)] lg:h-[calc(100vh-125px)] top-[125px]"
+        className="railway absolute w-full h-[calc(100vh-125px)] md:h-[calc(100vh-125px)] lg:h-[calc(100vh-125px)] top-[125px]"
       >
         <Image 
           src="/cbvndb.jpeg" 

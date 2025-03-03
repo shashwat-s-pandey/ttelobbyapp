@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Info, LayoutDashboard, Train, ClipboardList, Bell, Settings } from "lucide-react";
 import { LoginModal } from "./LoginModal";
+import "./Sidebar.css"
 
 const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -13,10 +14,11 @@ const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
       <aside
-  className={`absolute left-0 top-[125px] w-[187px] transition-all duration-300 shadow-xl border-gray-200 bg-white/30 backdrop-blur-lg flex flex-col min-h-[calc(100vh - 100px)] md:min-h-[calc(100vh-130px)] lg:min-h-[calc(100vh-130px)] bottom-0 z-40 ${
+  className={`sidebar absolute left-0 top-[125px] w-[187px] transition-all duration-300 shadow-xl border-gray-200 bg-white/30 backdrop-blur-lg flex flex-col md:min-h-[calc(100vh-130px)] lg:min-h-[calc(100vh-130px)] bottom-0 z-40 ${
     isOpen ? "px-4" : "px-2 w-[77px]"
   }`}
-  style={{ height: "calc(100vh - 125px)" }} // Ensures it doesn't overlap navbar
+  style={{ height: "calc(100vh - 125px)",
+   }} // Ensures it doesn't overlap navbar
 >
 
         <ul className="mt-6 space-y-4">
