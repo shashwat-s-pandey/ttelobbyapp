@@ -30,7 +30,7 @@ const Features = () => {
         </div>
         {/* Login Button */}
         <button 
-          className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 
+          className="mt-10 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 
                      transition-transform duration-300 transform hover:scale-105 shadow-lg"
           onClick={(e) => { 
             e.preventDefault();  

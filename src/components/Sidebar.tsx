@@ -5,7 +5,7 @@ import { Info, LayoutDashboard, Train, ClipboardList, Bell, Settings } from "luc
 import { LoginModal } from "./LoginModal";
 import "./Sidebar.css"
 
-const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) => {
+const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
@@ -26,10 +26,6 @@ const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) 
           {/* Dashboard - Opens Login Modal */}
           <li>
             <button
-              onClick={() => {
-                onLogin(); // Call parent login function
-                setIsLoginOpen(true); // Open the modal
-              }}
               className="w-full flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all"
             >
               <LayoutDashboard className="w-[28px] h-[28px] shrink-0" />
@@ -70,14 +66,14 @@ const Sidebar = ({ onLogin, isOpen }: { onLogin: () => void; isOpen: boolean }) 
           </li>
 
           {/* About */}
-          <li>
+          {/* <li>
             <Link href="/about" className="flex items-center text-gray-700 hover:bg-blue-500 hover:text-white p-3 rounded-lg transition-all">
               <Info className="w-[28px] h-[28px] shrink-0" />
               <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ${isOpen ? "opacity-100 ml-3 w-auto" : "opacity-0 w-0"}`}>
                 About
               </span>
             </Link>
-          </li>
+          </li> */}
 
           {/* Settings */}
           <li>

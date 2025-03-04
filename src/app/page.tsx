@@ -17,7 +17,6 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header/>
       <Nav onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-      <Sidebar onLogin={() => console.log("Login clicked")} isOpen={isSidebarOpen} />
       <motion.div
         initial={{ opacity: 0.1 }}
         animate={{ opacity: 0.5 }}
@@ -34,7 +33,7 @@ export default function Home() {
           blurDataURL="/cbvndb.jpeg" 
         />
       </motion.div>
-      <main className="ml-44 flex-grow pt-4">
+      <main className="flex-grow pt-4">
         <HeroSection />
       </main>
       <Footer/>
