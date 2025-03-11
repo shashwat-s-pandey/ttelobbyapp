@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Info, LayoutDashboard, Train, ClipboardList, Bell, Settings } from "lucide-react";
+import { LayoutDashboard, Train, ClipboardList, Bell, Settings } from "lucide-react";
 import { LoginModal } from "./LoginModal";
 import "./Sidebar.css"
 
