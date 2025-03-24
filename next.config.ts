@@ -12,7 +12,7 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "frame-ancestors 'self' https://osivamh5v2wvbf2.in.qlikcloud.com; default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://osivamh5v2wvbf2.in.qlikcloud.com;",
+              "default-src 'self'; style-src 'self' 'unsafe-inline' https://osivamh5v2wvbf2.in.qlikcloud.com; frame-src https://osivamh5v2wvbf2.in.qlikcloud.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://osivamh5v2wvbf2.in.qlikcloud.com;",
           },
         ],
       },
