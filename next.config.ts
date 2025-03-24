@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
-              frame-ancestors 'self' https://osivamh5v2wvbf2.in.qlikcloud.com ttelobbyapp.vercel.app;
+              frame-ancestors 'self' https://osivamh5v2wvbf2.in.qlikcloud.com https://login.qlik.com ttelobbyapp.vercel.app;
               frame-src https://osivamh5v2wvbf2.in.qlikcloud.com https://login.qlik.com;
               connect-src 'self' https://osivamh5v2wvbf2.in.qlikcloud.com;
               script-src 'self' 'unsafe-inline' 'unsafe-eval';
