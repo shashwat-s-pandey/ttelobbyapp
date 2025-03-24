@@ -23,6 +23,9 @@ const Nav = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
             <Link href="/" className="bg-blue-600 h-full flex items-center justify-center">
               <button className="h-full text-white px-5">Home</button>
             </Link>
+            <Link href="/about" className="bg-blue-600 h-full flex items-center justify-center">
+              <button className="h-full text-white px-5">About</button>
+            </Link>
             <Link className="h-full" href="/login" onClick={(e) => { 
                 e.preventDefault();  // Prevent default navigation
                 setIsLoginOpen(true); 
