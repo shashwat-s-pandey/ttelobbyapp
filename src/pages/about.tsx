@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const about = () => {
+const About = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -71,4 +71,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
